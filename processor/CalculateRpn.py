@@ -2,9 +2,6 @@ from typing import Callable
 
 
 class CalculateRpn:
-    # operation_priority: dict = {
-    #     ''
-    # }
     def __init__(self):
         self.stack = []
         self.operation: Operation = Operation()

@@ -2,8 +2,6 @@ from typing import Callable
 
 
 class ParseToRpn:
-    # PRIORITY: dict[int, list[str]] = {1: ['+', '-'], 2: ['*', '/'], 3: ['^']}
-
     def __init__(self):
         self.postfix: list = []
         self.operators: list = []
@@ -67,9 +65,3 @@ class ParseToRpn:
             self.postfix.append(self.operators.pop())
 
         return ' '.join(i for i in self.postfix)
-
-
-rpn = ParseToRpn()
-expr = '21 - 7 * 8 / (7 - 2)'
-res = rpn.get_pol_notation(expr)
-print(res)
